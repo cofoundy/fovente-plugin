@@ -1,0 +1,12 @@
+{
+  "name": "fovente",
+  "interface": { "displayName": "Fovente" },
+  "plugins": [
+    {
+      "name": "fovente",
+      "source": { "source": "local", "path": "./plugins/fovente" },
+      "policy": { "installation": "AVAILABLE", "authentication": "ON_INSTALL" },
+      "category": "Productivity"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "fovente",
+  "version": "0.1.0",
+  "description": "Connect your AI to Fovente, the AI WhatsApp sales agent and shared inbox: read and answer customer conversations, manage contacts, deals and follow-up tasks, and tune your AI agent from chat."
+}
