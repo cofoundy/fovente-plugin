@@ -1,6 +1,6 @@
 {
   "name": "fovente",
-  "interface": { "displayName": "Fovente" },
+  "interface": { "displayName": "Tracta" },
   "plugins": [
     {
       "name": "fovente",
