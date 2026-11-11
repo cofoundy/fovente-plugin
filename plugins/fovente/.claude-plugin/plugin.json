@@ -1,6 +1,6 @@
 {
   "name": "fovente",
-  "description": "Connect your AI to Fovente, the AI WhatsApp sales agent and shared inbox. Bundles the Fovente MCP server (OAuth), a skill that runs your inbox from chat, and a background watcher agent that wakes you when a customer writes — no polling loops.",
+  "description": "Connect your AI to Tracta, the AI WhatsApp sales agent and shared inbox. Bundles the Tracta MCP server (OAuth), a skill that runs your inbox from chat, and a background watcher agent that wakes you when a customer writes — no polling loops.",
   "version": "0.1.0",
   "author": { "name": "Cofoundy SAC", "url": "https://cofoundy.dev" },
   "homepage": "https://fovente.cofoundy.ai",

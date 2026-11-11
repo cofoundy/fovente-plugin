@@ -1,12 +1,12 @@
-# Fovente for Claude Code & Codex
+# Tracta for Claude Code & Codex
 
 **Run your WhatsApp sales inbox from your AI agent.** Read and answer customer conversations, take a chat
 over from the bot, and get woken up the moment a customer writes — without polling loops.
 
-[Fovente](https://fovente.cofoundy.ai) is an AI WhatsApp sales agent and shared inbox for small businesses.
+[Tracta](https://fovente.cofoundy.ai) is an AI WhatsApp sales agent and shared inbox for small businesses.
 This plugin connects your AI to it in one install:
 
-- **The Fovente MCP server** (OAuth): conversations, messages, contacts, deals, tasks, templates, and your
+- **The Tracta MCP server** (OAuth): conversations, messages, contacts, deals, tasks, templates, and your
   AI agent's scripts and settings — scoped to your workspace and role.
 - **A skill** that knows how to use it: "atiende a Rosa", "suscríbete a la conversación", "avísame cuando
   responda", "what's waiting for a reply today?".
@@ -23,7 +23,7 @@ This plugin connects your AI to it in one install:
 /plugin install fovente@fovente
 ```
 
-Then run `/mcp`, pick `fovente` and sign in with your Fovente account.
+Then run `/mcp`, pick `fovente` and sign in with your Tracta account.
 
 **Codex**
 
@@ -54,7 +54,7 @@ answer; your agent tells you, and hands it back when you're done.
 
 ## Requirements
 
-A Fovente account with the agent or admin role. Sending WhatsApp messages needs a connected number.
+A Tracta account with the agent or admin role. Sending WhatsApp messages needs a connected number.
 
 ## Links
 

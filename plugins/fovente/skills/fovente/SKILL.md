@@ -1,11 +1,11 @@
 ---
 name: fovente
-description: Use when the user wants to work their Fovente inbox from chat — read or answer WhatsApp/Telegram customer conversations, take over a chat from the AI agent, subscribe to / listen to / watch a conversation and react when the customer writes, manage contacts, deals and follow-up tasks, or edit the Fovente AI agent's scripts and settings. Triggers include "suscríbete a la conversación", "atiende a X", "escucha la conversa", "avísame cuando responda", "take over this chat", "watch this conversation", "reply to the customer", "Fovente".
+description: Use when the user wants to work their Tracta inbox from chat — read or answer WhatsApp/Telegram customer conversations, take over a chat from the AI agent, subscribe to / listen to / watch a conversation and react when the customer writes, manage contacts, deals and follow-up tasks, or edit the Tracta AI agent's scripts and settings. Triggers include "suscríbete a la conversación", "atiende a X", "escucha la conversa", "avísame cuando responda", "take over this chat", "watch this conversation", "reply to the customer", "Tracta".
 ---
 
-# Fovente
+# Tracta
 
-Fovente is an AI WhatsApp sales agent plus a shared inbox. This plugin connects you to it through the
+Tracta is an AI WhatsApp sales agent plus a shared inbox. This plugin connects you to it through the
 `fovente` MCP server (OAuth — the user signs in once; every call is scoped to their workspace and role).
 
 MCP tools can load lazily: if you only see tool names, search for them first (e.g. `fovente conversations_take`).
