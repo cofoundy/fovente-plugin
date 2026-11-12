@@ -1,6 +1,6 @@
 ---
 name: tracta
-description: Use when the user wants to work their Tracta inbox from chat — read or answer WhatsApp/Telegram customer conversations, take over a chat from the AI agent, subscribe to / listen to / watch a conversation and react when the customer writes, manage contacts, deals and follow-up tasks, or edit the Tracta AI agent's scripts and settings. Triggers include "suscríbete a la conversación", "atiende a X", "escucha la conversa", "avísame cuando responda", "take over this chat", "watch this conversation", "reply to the customer", "Tracta".
+description: Use when the user wants to work their Tracta inbox from chat — read or answer WhatsApp/Telegram customer conversations, take over a chat from the AI agent, subscribe to / listen to / watch a conversation and react when the customer writes, manage contacts, deals and follow-up tasks, or edit the Tracta AI agent's scripts and settings. Triggers include "quédate de guardia", "vigila la cuenta", "avísame si alguien escribe", "suscríbete a la conversación", "atiende a X", "escucha la conversa", "avísame cuando responda", "take over this chat", "watch this conversation", "reply to the customer", "Tracta".
 ---
 
 # Tracta
@@ -10,14 +10,31 @@ Tracta is an AI WhatsApp sales agent plus a shared inbox. This plugin connects y
 
 MCP tools can load lazily: if you only see tool names, search for them first (e.g. `tracta conversations_take`).
 
-## Listening to a conversation in real time — never poll
+## On guard for the whole account — never poll
+
+When the user asks you to stay on guard, watch the account, or answer whoever writes in a chat without AI,
+the tool is **`conversations_wait`**. It blocks until a customer writes in ANY conversation that waits for a
+person (its AI is off, or it was escalated) and returns who wrote, in which conversation and what they said.
+It takes nothing and turns nothing off; chats where the AI is answering never wake it. Each call returns only
+what arrived since your previous call, so nothing is lost between calls.
+
+In Claude Code, run it in the background, never on the main thread:
+
+1. Dispatch `Agent(subagent_type: "tracta:watcher", run_in_background: true, prompt: "mode: account")`.
+2. Tell the user, in one line, that you are on guard and the chat stays free.
+3. When the watcher wakes you, for each conversation it names: **take the one you are going to attend**
+   with `conversations_take(<id>)` (that claims it for you, so two agents never answer the same customer),
+   then answer per the rules below (draft and wait for OK, unless the user said to answer on your own).
+4. Dispatch a new account watcher right away. Repeat until the user says stop.
+
+## Listening to one conversation in real time — never poll
 
 When the user asks you to subscribe to, listen to, watch or attend a conversation, or to tell them when the
 customer answers, the tool is **`conversations_take`**. It blocks until the customer writes and returns the
 whole burst of messages as text. There is no webhook to set up and **you must not poll**: no loops, no
 `/loop`, no cron, no "I'll check every N minutes" — each poll burns a turn and still arrives late.
 
-**In Claude Code, never call `conversations_take` on the main thread.** It blocks for up to ~5 minutes per
+**In Claude Code, never call `conversations_take` on the main thread.** It blocks for up to ~4 minutes per
 call and the user loses the chat while it waits. Run it in the background through the watcher agent:
 
 1. Resolve the conversation id (`conversations_search` / `conversations_list`). If more than one matches,

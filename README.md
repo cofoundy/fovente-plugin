@@ -10,9 +10,11 @@ This plugin connects your AI to it in one install:
   AI agent's scripts and settings — scoped to your workspace and role.
 - **A skill** that knows how to use it: "atiende a Rosa", "suscríbete a la conversación", "avísame cuando
   responda", "what's waiting for a reply today?".
-- **A background watcher agent** (Claude Code): it waits on the conversation while your chat stays free,
-  and pings your agent the instant the customer writes. Your agent drafts the reply — or sends it, if you
-  told it to — and keeps listening.
+- **A background watcher agent** (Claude Code): it waits on the whole account — or on one conversation —
+  while your chat stays free, and pings your agent the instant a customer writes in a chat without AI. Your
+  agent takes that chat, drafts the reply — or sends it, if you told it to — and keeps listening.
+- **A `paneles` skill**: builds a live claude.ai panel over your account (deals by stage, chats waiting for
+  a person) that reads the connector each time it is opened, without exposing customers' phone numbers.
 
 ## Install
 
@@ -32,7 +34,7 @@ codex plugin marketplace add cofoundy/tracta-plugin
 ```
 
 Install `tracta` from `/plugins` and sign in. Codex stops a tool call after 60 s by default, and listening
-to a conversation waits up to ~5 minutes per call. Raise it in `~/.codex/config.toml`:
+to a conversation waits up to ~4 minutes per call. Raise it in `~/.codex/config.toml`:
 
 ```toml
 [mcp_servers.tracta]
