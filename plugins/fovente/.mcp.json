@@ -1,8 +1,0 @@
-{
-  "mcpServers": {
-    "fovente": {
-      "type": "http",
-      "url": "https://mcp.fovente.cofoundy.ai/mcp"
-    }
-  }
-}

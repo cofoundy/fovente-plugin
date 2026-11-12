@@ -1,10 +1,10 @@
 {
-  "name": "fovente",
+  "name": "tracta",
   "interface": { "displayName": "Tracta" },
   "plugins": [
     {
-      "name": "fovente",
-      "source": { "source": "local", "path": "./plugins/fovente" },
+      "name": "tracta",
+      "source": { "source": "local", "path": "./plugins/tracta" },
       "policy": { "installation": "AVAILABLE", "authentication": "ON_INSTALL" },
       "category": "Productivity"
     }

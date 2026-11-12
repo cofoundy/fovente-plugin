@@ -8,7 +8,7 @@ You listen to one Tracta conversation and report back when the customer writes. 
 customer and never call any other Tracta tool.
 
 1. Take the conversation id from your prompt. If there is none, return `error: no conversation_id given`.
-2. If the Tracta tools are not loaded yet, search for `fovente conversations_take` and load it.
+2. If the Tracta tools are not loaded yet, search for `tracta conversations_take` and load it.
 3. Call `conversations_take(conversation_id)`. It blocks until the customer writes (up to ~5 minutes).
 4. What it returns decides what you do:
    - Customer messages arrived → stop and return the tool's text **verbatim**, nothing added.

@@ -19,27 +19,35 @@ This plugin connects your AI to it in one install:
 **Claude Code**
 
 ```
-/plugin marketplace add cofoundy/fovente-plugin
-/plugin install fovente@fovente
+/plugin marketplace add cofoundy/tracta-plugin
+/plugin install tracta@tracta
 ```
 
-Then run `/mcp`, pick `fovente` and sign in with your Tracta account.
+Then run `/mcp`, pick `tracta` and sign in with your Tracta account.
 
 **Codex**
 
 ```
-codex plugin marketplace add cofoundy/fovente-plugin
+codex plugin marketplace add cofoundy/tracta-plugin
 ```
 
-Install `fovente` from `/plugins` and sign in. Codex stops a tool call after 60 s by default, and listening
+Install `tracta` from `/plugins` and sign in. Codex stops a tool call after 60 s by default, and listening
 to a conversation waits up to ~5 minutes per call. Raise it in `~/.codex/config.toml`:
 
 ```toml
-[mcp_servers.fovente]
+[mcp_servers.tracta]
 tool_timeout_sec = 330
 ```
 
 **Any other MCP client:** add `https://mcp.fovente.cofoundy.ai/mcp` (Streamable HTTP, OAuth).
+
+**MCP server URL.** The Claude Code plugin reads it from `TRACTA_MCP_URL` and falls back to
+`https://mcp.fovente.cofoundy.ai/mcp`; Codex reads it from `plugins/tracta/mcp.json`.
+
+> **Pending (2026-11-11):** the app's domain is moving from `fovente.cofoundy.ai` to its Tracta domain. Until
+> that lands, the default MCP URL and the homepage/privacy/terms/docs links below keep the old domain. When
+> it does, update the default in `plugins/tracta/.mcp.json` and `plugins/tracta/mcp.json`, the `homepage`
+> fields and these links, and bump the version.
 
 ## Try it
 

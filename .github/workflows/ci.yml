@@ -6,6 +6,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: JSON manifests parse
-        run: for f in .claude-plugin/marketplace.json .agents/plugins/marketplace.json plugins/fovente/.claude-plugin/plugin.json plugins/fovente/plugin.json plugins/fovente/.mcp.json plugins/fovente/mcp.json; do python3 -m json.tool "$f" > /dev/null || exit 1; done
+        run: for f in .claude-plugin/marketplace.json .agents/plugins/marketplace.json plugins/tracta/.claude-plugin/plugin.json plugins/tracta/plugin.json plugins/tracta/.mcp.json plugins/tracta/mcp.json; do python3 -m json.tool "$f" > /dev/null || exit 1; done
       - name: Skills and agents have frontmatter name + description
         run: bash scripts/validate.sh

@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "tracta": {
+      "type": "http",
+      "url": "${TRACTA_MCP_URL:-https://mcp.fovente.cofoundy.ai/mcp}"
+    }
+  }
+}

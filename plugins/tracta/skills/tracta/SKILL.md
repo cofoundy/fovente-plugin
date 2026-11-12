@@ -1,14 +1,14 @@
 ---
-name: fovente
+name: tracta
 description: Use when the user wants to work their Tracta inbox from chat — read or answer WhatsApp/Telegram customer conversations, take over a chat from the AI agent, subscribe to / listen to / watch a conversation and react when the customer writes, manage contacts, deals and follow-up tasks, or edit the Tracta AI agent's scripts and settings. Triggers include "suscríbete a la conversación", "atiende a X", "escucha la conversa", "avísame cuando responda", "take over this chat", "watch this conversation", "reply to the customer", "Tracta".
 ---
 
 # Tracta
 
 Tracta is an AI WhatsApp sales agent plus a shared inbox. This plugin connects you to it through the
-`fovente` MCP server (OAuth — the user signs in once; every call is scoped to their workspace and role).
+`tracta` MCP server (OAuth — the user signs in once; every call is scoped to their workspace and role).
 
-MCP tools can load lazily: if you only see tool names, search for them first (e.g. `fovente conversations_take`).
+MCP tools can load lazily: if you only see tool names, search for them first (e.g. `tracta conversations_take`).
 
 ## Listening to a conversation in real time — never poll
 
@@ -23,7 +23,7 @@ call and the user loses the chat while it waits. Run it in the background throug
 1. Resolve the conversation id (`conversations_search` / `conversations_list`). If more than one matches,
    ask which one.
 2. Dispatch the watcher in the background:
-   `Agent(subagent_type: "fovente:watcher", run_in_background: true, prompt: "conversation_id: con_…")`.
+   `Agent(subagent_type: "tracta:watcher", run_in_background: true, prompt: "conversation_id: con_…")`.
 3. Tell the user, in one line, that you are listening and that the chat stays free. Keep working on
    whatever else they ask.
 4. When the watcher's notification arrives, read the customer's messages and act:
