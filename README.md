@@ -39,10 +39,10 @@ to a conversation waits up to ~5 minutes per call. Raise it in `~/.codex/config.
 tool_timeout_sec = 330
 ```
 
-**Any other MCP client:** add `https://mcp.fovente.cofoundy.ai/mcp` (Streamable HTTP, OAuth).
+**Any other MCP client:** add `https://mcp.coresponde.com/mcp` (Streamable HTTP, OAuth).
 
 **MCP server URL.** The Claude Code plugin reads it from `TRACTA_MCP_URL` and falls back to
-`https://mcp.fovente.cofoundy.ai/mcp`; Codex reads it from `plugins/tracta/mcp.json`.
+`https://mcp.coresponde.com/mcp`; Codex reads it from `plugins/tracta/mcp.json`.
 
 > **Pending (2026-11-11):** the app's domain is moving from `fovente.cofoundy.ai` to its Tracta domain. Until
 > that lands, the default MCP URL and the homepage/privacy/terms/docs links below keep the old domain. When
