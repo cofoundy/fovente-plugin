@@ -13,8 +13,6 @@ This plugin connects your AI to it in one install:
 - **A background watcher agent** (Claude Code): it waits on the whole account — or on one conversation —
   while your chat stays free, and pings your agent the instant a customer writes in a chat without AI. Your
   agent takes that chat, drafts the reply — or sends it, if you told it to — and keeps listening.
-- **A `paneles` skill**: builds a live claude.ai panel over your account (deals by stage, chats waiting for
-  a person) that reads the connector each time it is opened, without exposing customers' phone numbers.
 
 ## Install
 
