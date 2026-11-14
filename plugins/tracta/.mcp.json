@@ -2,7 +2,7 @@
   "mcpServers": {
     "tracta": {
       "type": "http",
-      "url": "${TRACTA_MCP_URL:-https://mcp.coresponde.com/mcp}"
+      "url": "${TRACTA_MCP_URL:-https://mcp.gettracta.com/mcp}"
     }
   }
 }

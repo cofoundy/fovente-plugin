@@ -3,7 +3,7 @@
 **Run your WhatsApp sales inbox from your AI agent.** Read and answer customer conversations, take a chat
 over from the bot, and get woken up the moment a customer writes — without polling loops.
 
-[Tracta](https://fovente.cofoundy.ai) is an AI WhatsApp sales agent and shared inbox for small businesses.
+[Tracta](https://gettracta.com) is an AI WhatsApp sales agent and shared inbox for small businesses.
 This plugin connects your AI to it in one install:
 
 - **The Tracta MCP server** (OAuth): conversations, messages, contacts, deals, tasks, templates, and your
@@ -39,15 +39,14 @@ to a conversation waits up to ~4 minutes per call. Raise it in `~/.codex/config.
 tool_timeout_sec = 330
 ```
 
-**Any other MCP client:** add `https://mcp.coresponde.com/mcp` (Streamable HTTP, OAuth).
+**Any other MCP client:** add `https://mcp.gettracta.com/mcp` (Streamable HTTP, OAuth).
 
 **MCP server URL.** The Claude Code plugin reads it from `TRACTA_MCP_URL` and falls back to
-`https://mcp.coresponde.com/mcp`; Codex reads it from `plugins/tracta/mcp.json`.
+`https://mcp.gettracta.com/mcp`; Codex reads it from `plugins/tracta/mcp.json`.
 
-> **Pending (2026-11-11):** the app's domain is moving from `fovente.cofoundy.ai` to its Tracta domain. Until
-> that lands, the default MCP URL and the homepage/privacy/terms/docs links below keep the old domain. When
-> it does, update the default in `plugins/tracta/.mcp.json` and `plugins/tracta/mcp.json`, the `homepage`
-> fields and these links, and bump the version.
+> **Moved (2026-11-14):** the server now lives at `mcp.gettracta.com`. If you connected before that date
+> (against `mcp.fovente.cofoundy.ai` or `mcp.coresponde.com`), sign in again once: the old hosts still answer,
+> but the OAuth issuer changed, so the old token no longer authorizes.
 
 ## Try it
 
@@ -67,7 +66,7 @@ A Tracta account with the agent or admin role. Sending WhatsApp messages needs a
 ## Links
 
 [Docs](https://app.basalt.cofoundy.ai/cofoundy/fovente-public/mcp) ·
-[Privacy](https://fovente.cofoundy.ai/privacidad) · [Terms](https://fovente.cofoundy.ai/terminos) ·
+[Privacy](https://app.gettracta.com/privacidad) · [Terms](https://app.gettracta.com/terminos) ·
 Support: info@cofoundy.dev
 
 MIT © Cofoundy SAC
