@@ -3,16 +3,16 @@
   "owner": { "name": "Cofoundy SAC", "email": "info@cofoundy.dev" },
   "metadata": {
     "description": "Tracta — the AI WhatsApp sales agent and shared inbox. Connect your AI to read, answer and follow up on customer conversations.",
-    "version": "0.4.0"
+    "version": "0.4.1"
   },
   "plugins": [
     {
       "name": "tracta",
       "source": "./plugins/tracta",
       "description": "Connect your AI to Tracta: the MCP server (OAuth), a skill that runs your WhatsApp inbox from chat, and a background watcher that wakes your agent the moment a customer writes — no polling loops.",
-      "version": "0.4.0",
+      "version": "0.4.1",
       "author": { "name": "Cofoundy SAC" },
-      "homepage": "https://fovente.cofoundy.ai"
+      "homepage": "https://gettracta.com"
     }
   ]
 }

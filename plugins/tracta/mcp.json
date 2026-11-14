@@ -3,7 +3,7 @@
   "mcpServers": {
     "tracta": {
       "type": "streamable-http",
-      "url": "https://mcp.coresponde.com/mcp"
+      "url": "https://mcp.gettracta.com/mcp"
     }
   }
 }
